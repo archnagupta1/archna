@@ -1,0 +1,76 @@
+spring:
+ profiles: dev
+server.port: 8090
+component: 
+  -
+    componentID: DNT
+    componentName: Duties and Taxes
+    inputChannel: IN_COMP_DNT
+    outputChannel: IN_COMP_PFC
+    monitorChannel: MON_COMP_DNT
+    controlChannel: CTRL_COMP_DNT
+    errorChannel: ERR_COMP_DNT
+    inputjmshost: localhost
+    inputjmsport: 61616
+    outputjmshost: localhost
+    outputjmsport: 61616
+    monitorjmshost: localhost
+    monitorjmsport: 61616
+    controljmshost: localhost
+    controljmsport: 61616
+    errorjmshost: localhost
+    errorjmsport: 61616        
+  -
+    componentID: DCS
+    componentName: Determine Clearance Scheme
+    inputChannel: IN_COMP_DCS
+    outputChannel: IN_COMP_PFC
+    monitorChannel: MON_COMP_DCS 
+    controlChannel: CTRL_COMP_DCS
+    errorChannel: ERR_COMP_DCS 
+    inputjmshost: localhost
+    inputjmsport: 61616
+    outputjmshost: localhost
+    outputjmsport: 61616
+    monitorjmshost: localhost
+    monitorjmsport: 61616
+    controljmshost: localhost
+    controljmsport: 61616
+    errorjmshost: localhost
+    errorjmsport: 61616  
+  -
+    componentID: PFC
+    componentName: Process Flow Controller
+    inputChannel: IN_COMP_PFC
+    outputChannel: 
+    monitorChannel: MON_COMP_PFC
+    controlChannel: CTRL_COMP_PFC
+    errorChannel: ERR_COMP_PFC
+    inputjmshost: localhost
+    inputjmsport: 61616
+    outputjmshost: 
+    outputjmsport: 
+    monitorjmshost: localhost
+    monitorjmsport: 61616
+    controljmshost: localhost
+    controljmsport: 61616
+    errorjmshost: localhost
+    errorjmsport: 61616     
+  -
+    componentID: CSF
+    componentName: Create Shipment Folder
+    inputChannel: IN_COMP_CSF_new
+    outputChannel: IN_COMP_PFC
+    monitorChannel: MON_COMP_CSF_new
+    controlChannel: CTRL_COMP_CSF_new
+    errorChannel: ERR_COMP_CSF_new
+    inputjmshost: localhost
+    inputjmsport: 61616
+    outputjmshost: localhost
+    outputjmsport: 61616
+    monitorjmshost: localhost
+    monitorjmsport: 61616
+    controljmshost: localhost
+    controljmsport: 61616
+    errorjmshost: localhost
+    errorjmsport: 61616      
